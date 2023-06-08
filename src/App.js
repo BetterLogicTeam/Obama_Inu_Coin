@@ -14,18 +14,18 @@ function App() {
 
   return (
     <div className="App">
-      <div id="root">
-        <div className="flex h-screen bg-gray-50 dark:bg-gray-900 ">
-          <SideBar navOpen={navOpen} />
 
-          <div className="flex flex-col flex-1 w-full">
-            <Header setnavOpen={setnavOpen} setgetAddress={setgetAddress} />
+      <div className="flex h-screen bg-gray-50 dark:bg-gray-900 ">
+        <SideBar navOpen={navOpen} />
 
-            <DashBoard getAddress={getAddress} />
-          </div>
+        <div className="flex flex-col flex-1 w-full">
+          <Header setnavOpen={setnavOpen} setgetAddress={setgetAddress} />
 
+          <DashBoard getAddress={getAddress} />
         </div>
+
       </div>
+
 
     </div>
   );

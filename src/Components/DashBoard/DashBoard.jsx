@@ -5,8 +5,8 @@ import {
   dividendCoinABI,
   dividendCoinAdress,
 } from "../../Utils/Contact";
-
 import Web3 from "web3";
+
 
 export default function DashBoard({ getAddress }) {
   let obj = {
@@ -21,10 +21,10 @@ export default function DashBoard({ getAddress }) {
   const [IsLoading, setIsLoading] = useState(false)
   const [date_show, setdate_show] = useState(0)
 
-  const webSupply = new Web3("https://bsc-mainnet.public.blastapi.io");
-
+  
   const Earnings = async () => {
     try {
+      const webSupply = new Web3("https://bsc-mainnet.public.blastapi.io");
       setIsLoading(true)
       const web3 = window.web3;
 
@@ -116,8 +116,7 @@ export default function DashBoard({ getAddress }) {
   useEffect(() => {
     if (getAddress !== "") {
       Earnings();
-      
-
+    
     }
   }, [getAddress]);
 
